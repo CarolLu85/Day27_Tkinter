@@ -1,21 +1,21 @@
-import tkinter
+from tkinter import *
 
-window = tkinter.Tk()
+window = Tk()
 window.title("My First GUI Program")
 window.minsize(500, 300)
 
 # Label
 
-my_label = tkinter.Label(text="I am a Label", font=("Arial", 24, "bold"))
+my_label = Label(text="I am a Label", font=("Arial", 24, "bold"))
 # packed = center of the program
 my_label.pack()
 my_label["text"] = "New Text"
-my_label.config(text= "New Text")
+# my_label.config(text= "New Text")
 # my_lable.pack(side="left"/"right"/"bottom")
 # my_label.pack(expand=True)
 
 # Advanced Python Arguments:
-def my_function(a, b, c):
+# def my_function(a, b, c):
     #Do this with a
     #Then do this with b
     #Finally do this with c
@@ -32,10 +32,37 @@ def my_function(a, b, c):
 
 button = Button(text= "Click me")
 def button_clicked():
-    my_label.config("i got clicked")
-
-button = Button(text="click me", command=button_clicked())
+    new_text = input.get()
+    my_label.config(text= new_text)
+#
+button = Button(text="click me", command=button_clicked)
 button.pack()
+
+
+# Entry
+input = Entry(width=10)
+# to show up on the screen, use "pack()"
+input.pack()
+# return the input as a string, via "get()"
+
+input.get()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
